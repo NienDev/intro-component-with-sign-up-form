@@ -81,3 +81,7 @@ input.error{
   border-width: 2px;
 }
 
+.text-left{
+  text-align: left;
+}
+
