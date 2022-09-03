@@ -9,6 +9,14 @@ function foundError(e){
   errorMessage.classList.remove('hidden')
 }
 
+function valid(e){
+  e.classList.remove('error')
+  const errorIcon = e.parentElement.querySelector('.error-icon')
+  errorIcon.classList.add('hidden')
+  const errorMessage = e.parentElement.querySelector('.error-message')
+  errorMessage.classList.add('hidden')
+}
+
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -23,16 +31,37 @@ form.addEventListener('submit', e=>{
   const lastName = document.querySelector('#lastName')
   const email = document.querySelector('#email')
   const password = document.querySelector('#password')
-  if (firstName.innerHTML == ""){
+
+  var ok = true;
+
+  if (firstName.value == ""){
     foundError(firstName)
+    ok = false
+  }else{
+    // log('vo')
+    valid(firstName)
   }
-  if (lastName.innerHTML == ""){
+  if (lastName.value == ""){
     foundError(lastName)
+    ok = false
+  }else{
+    valid(lastName)
   }
-  if (password.innerHTML == ""){
+  if (password.value == ""){
     foundError(password)
+    ok = false
+  }else{
+    valid(password)
   }
-  if (!validateEmail(email.innerHTML)){
+  if (!validateEmail(email.value)){
     foundError(email)
+    ok = false
+  }else{
+    valid(email)
+  }
+
+  if (ok){
+    alert("Succesfully Sign Up")
+    location.reload();
   }
 })
