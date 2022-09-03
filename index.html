@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="min-h-screen w-full flex items-center justify-center">
+  <main class="grid grid-cols-1 sm:grid-cols-2 sm:mx-24 text-center my-8">
+    <div class="text-white flex items-center flex-col justify-center">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+        Learn to code by watching others
+      </h1>
+      <p class="text-base sm:text-lg px-4 mb-8 sm:mb-0">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+    <div>
+      <div class="mx-8 bg-Blue rounded-sm mb-4 shadow-light text-white py-4 text-center text-md sm:text-lg">
+        <span class="font-semibold">Try it free 7 days</span> then $20/mo. thereafter
+      </div>
+      <form class="mx-8 shadow-light bg-white rounded-lg flex flex-col p-8">
+        <div class="relative">
+          <input id="firstName" type="text" placeholder="First Name"
+            class="text-sm sm:text-base border py-2 px-4 w-full">
+          <div class="error-message text-xs text-Red text-right mt-2 font-semibold hidden">
+            First Name cannot be empty
+          </div>
+          <div class="error-icon absolute bottom-1/2 right-5 hidden">
+            <img src="./images/icon-error.svg" alt="icon-error">
+          </div>
+        </div>
+
+        <div class="relative my-4">
+          <input id="lastName" type="text" placeholder="Last Name" class="text-sm sm:text-base border py-2 px-4 w-full">
+          <div class="error-message text-xs text-Red text-right font-semibold hidden mt-2">
+            Last Name cannot be empty
+          </div>
+          <div class="error-icon absolute bottom-1/2 right-5 hidden">
+            <img src="./images/icon-error.svg" alt="icon-error">
+          </div>
+        </div>
+
+        <div class="relative my-4 mt-0">
+          <input id="email" type="email" placeholder="Email Address"
+            class="text-sm sm:text-base  border py-2 px-4 w-full">
+          <div class="error-message text-xs text-Red text-right mt-2 font-semibold hidden">
+            Look like this is not an email
+          </div>
+          <div class="error-icon absolute top-2.5 right-5 hidden">
+            <img src="./images/icon-error.svg" alt="icon-error">
+          </div>
+        </div>
+
+        <div class="relative">
+          <input id="password" type="password" placeholder="Password"
+            class="text-sm sm:text-base border py-2 px-4 w-full">
+          <div class="error-message text-xs text-Red text-right mt-2 font-semibold hidden">
+            Password cannot be empty
+          </div>
+          <div class="error-icon absolute bottom-1/2 right-5 hidden">
+            <img src="./images/icon-error.svg" alt="icon-error">
+          </div>
+        </div>
+
+        <button
+          class="cursor-pointer bg-Green uppercase py-2 text-white rounded mt-4 shadow-green hover:opacity-80 font-semibold tracking-widest">Claim
+          your free
+          trial</button>
+        <div class="mt-4 text-xs text-center text-grayish px-6 sm:px-0">
+          By clicking the button, you are agreeing to our <a href="#" class="font-bold text-Red">Terms and Services</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
